@@ -1,0 +1,110 @@
+# ╔───────────────────────────────────────────────────╗
+# │  ___    ___ ________  ___  ___  ________ ________ │
+# │ |\  \  /  /|\   __  \|\  \|\  \|\  _____\\  _____\│
+# │ \ \  \/  / | \  \|\ /\ \  \\\  \ \  \__/\ \  \__/ │
+# │  \ \    / / \ \   __  \ \  \\\  \ \   __\\ \   __\│
+# │   \/  /  /   \ \  \|\  \ \  \\\  \ \  \_| \ \  \_|│
+# │ __/  / /      \ \_______\ \_______\ \__\   \ \__\ │
+# │|\___/ /        \|_______|\|_______|\|__|    \|__| │
+# │\|___|/                                            │
+# ╚───────────────────────────────────────────────────╝
+
+# yBuff v1.0.0
+
+#  INFOS DO CRIADOR E FORMAS DE CONTATO
+
+# Desenvolvedor: yLabui
+# Github: https://github.com/yLabui
+# Discord: labui
+# Contato: ylabui.contact@gmail.com
+# YouTube: https://www.youtube.com/@yLabuiDev
+# Meu servidor no Discord: https://discord.gg/huWzxKd8M2
+
+
+#  CONFIGURAÇÕES DO PLUGIN
+
+#  Aqui você define qual permissão será necessária para poder
+# utilizar todos os comandos do plugin. Lembrando que jogadores
+# com operador no servidor não precisarão da permissão, apenas
+# jogadores comuns sem OP.
+
+admin-permission: "buff.admin"
+
+
+#  Aqui você define qual modo deseja utilizar como requisito para
+# a execução do comando de /buff. As opções para uso são:
+# normal: Não precisa de nenhum requisito ao usar o comando.
+# money: Precisa de uma certa quantia de money para usar o comando.
+# xp: Precisa de uma determinada quantia de níveis de xp para usar o comando.
+# item: Precisa de um item específico para usar o comando.
+
+mode: normal
+
+custs:
+  money: 0
+  xp: 10
+  item:
+    name: DIAMOND_SWORD
+    amount: 1
+
+
+#  Aqui você pode definir quais efeitos serão dados ao jogador
+# quando ele usar o comando de /buff, além do tempo do efeito e
+# sua amplificação. Você pode setar esses efeitos in-game, usando
+# o comando /buff add [effect name] [time] [amplification].
+
+buff_effets:
+  NIGHT_VISION:
+    time: 10
+    amplification: 255
+
+
+#  Aqui você define se os efeitos devem mostrar partículas ao
+# redor do jogador enquanto ele estiver utilizando o /buff.
+# Utilize enable ou disable.
+
+show_particle: enable
+
+
+#  Aqui você escolhe se quer ativar um determinado tempo de espera para
+# poder executar o comando novamente. Para cooldown_mode: use enable ou
+# disable. Já no cooldown_time você define o tempo que o jogador deverá
+# esperar para executar o comando novamente. (o time deve ser em segundos)
+
+cooldown_mode: enable
+cooldown_time: 5
+
+
+#  Abaixo você pode definir textos customizados para diferentes
+# ocasiões. Modifique como desejar e, no caso de outra língua,
+# você pode apenas traduzir os textos. Altere apenas os trechos
+# entre aspas duplas.
+
+messages:
+  set_mode: "&dBuff: Modo alterado para &e%mode%&d com sucesso!"
+  is_set_mode: "&cBuff: Este modo já está ativo."
+  error_set_mode: "&cBuff: Modo inválido! Por favor, escolha um modo válido."
+  set_particle: "&dBuff: Exibição de partículas agora está %particle_mode%."
+  add_effect: "&dBuff: Efeito &e%effect% &dadicionado com sucesso!"
+  remove_effect: "&dBuff: Efeito &c%effect% &dremovido com sucesso!"
+  not_found_effect: "&cBuff: Efeito &e%effect% &cnão encontrado na configuração."
+  error_add_effect: "&cBuff: Este efeito já está definido."
+  error_effect: "&cBuff: Tempo e Amplificação devem ser números válidos."
+  not_list: "&cBuff: Nenhum efeito foi encontrado na configuração."
+  title_list: "&e===== Efeitos configurados ====="
+  show_list: "&f- &b%effect% &7(Tempo: &a%time%&7, Amplificação: &a%amplification%&7)"
+  buff_command: "&dBuff: Você ativou o comando /buff com sucesso!"
+  not_have_xp: "&cBuff: Você não possui &e%xp_need% &cnível(is) de XP suficiente."
+  not_have_item: "&cBuff: Você não possui &d%item_amount%x &b%item_name% &cem seu inventário."
+  use_add: "&cUso correto: /buff add [nome_do_efeito] [tempo] [amplificação]"
+  use_remove: "&cUso correto: /buff remove [nome_do_efeito]"
+  use_list: "&cUso correto: /buff list"
+  use_mode: "&cUso correto: /buff mode [normal | money | xp | item]"
+  use_particle: "&cUso correto: /buff particle [enable | disable]"
+  invalid_usage: "&cBuff: Comando inválido! Use /buff help para ajuda."
+  reload_sucess: "&aBuff: Configuração recarregada com sucesso!"
+  not_permission: "&cBuff: Apenas operadores podem usar este comando."
+  enable_cooldown: "&aBuff: Cooldown ativado! Tempo definido para: %time%"
+  disable_cooldown: "&cBuff: Cooldown desativado."
+  wait_cooldown: "&cBuff: Aguarde &e%wait_time% &cpara usar /buff novamente."
+  developing: "&cBuff: Sistema em desenvolvimento, aguarde novidades."
